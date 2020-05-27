@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
     margin: 0;
     background-color: #f0efed;
@@ -36,7 +40,7 @@ body {
 
 .header-main h1 {
   font-size: 2rem;
-  text-shadow: 0px 0px 3px #000;
+  text-shadow: 0px 0px 2px #000;
   margin: 0;
 }
 
@@ -46,7 +50,8 @@ body {
   margin: 0;
 }
 
-nav {
+.nav {
+  display: block;
   grid-area: navbar;
   background-color: #d10100;
   font-family: "Courier New", monospace;
@@ -91,12 +96,16 @@ nav {
 }
 
 .subnav-content a {
+  display: inline-block;
   text-align: center;
   color: white;
   margin: 0.9rem 1rem;
+  text-decoration: none;
 }
 
-nav a:hover, .subnav:hover .subnavbtn {
+.desktop-nav a:hover, 
+.subnav:hover .subnavbtn,
+.subnav-content a:hover {
   background-color: #b10201;
   text-shadow: 0 0 3px #000;
 }
@@ -134,10 +143,11 @@ nav a:hover, .subnav:hover .subnavbtn {
     background: white;
     width: 65vw;
     max-width: 250px;
-    height: 100vh
+    height: 100vh;
 }
 
 .mobile-nav__item {
+    font-family: "Courier New", monospace;
     display: block;
     font-size: 16px;
     font-weight: bold;
@@ -151,6 +161,7 @@ nav a:hover, .subnav:hover .subnavbtn {
 
 .mobile-nav__item:hover {
   color: white;
+  background-color: #b10201;
 }
 
   main {
@@ -191,7 +202,7 @@ footer a {
     display: none;
   }
 
-  nav {
+  .nav {
     text-align: center;
   }
 }
