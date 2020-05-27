@@ -225,3 +225,13 @@ footer a {
     text-align: center;
   }
 }
+
+@media (max-height: 21rem) {
+  .mobile-nav__item {
+    padding: 0.6rem 1rem;
+  }
+
+  .mobile-nav-content {
+    margin-top: calc((100vh - (6 * 3rem))/2);
+  }
+}
