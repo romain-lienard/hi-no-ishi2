@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    background-color: #f0efed;
+    height: 100%;
+    min-width: 300px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: min-content 3rem auto min-content;
+    grid-template-areas:
+      "header"
+      "navbar"
+      "content"
+      "footer";
+  }
+
+.backdrop {
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.header-main {
+  grid-area: header;
+  background-image: url("../img/header-background-fhd2.jpg");
+  background-position: center;
+  background-size: 100% auto;
+  color: white;
+  text-align: center;
+  font-family: "Courier New", monospace;
+  align-self: center;
+  padding: 30px 0 30px 0;
+}
+
+.header-main h1 {
+  font-size: 2rem;
+  text-shadow: 0px 0px 3px #000;
+  margin: 0;
+}
+
+.header-main h2 {
+  font-size: 1rem;
+  text-shadow: 0 0 2px #000;
+  margin: 0;
+}
+
+nav {
+  grid-area: navbar;
+  background-color: #d10100;
+  font-family: "Courier New", monospace;
+  z-index: 1;
+  text-align: left;
+}
+
+.desktop-nav__item {
+  display: none;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+}
+
+.subnav {
+  display: inline-block;
+  padding: 0;
+}
+
+.subnav .subnavbtn {
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0.9rem 1rem;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #b10201;
+  height: 3rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  text-align: center;
+  color: white;
+  margin: 0.9rem 1rem;
+}
+
+nav a:hover, .subnav:hover .subnavbtn {
+  background-color: #b10201;
+  text-shadow: 0 0 3px #000;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.toggle-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-top: calc((3rem - 2.5rem)/2);
+  margin-left: 0.5rem;
+}
+
+.toggle-button:focus {
+  outline: none;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.toggle-button__bars {
+  font-size: 1.8rem !important;
+  color: white;
+}
+
+.mobile-nav {
+    position: fixed;
+    display: none;
+    z-index: 20;
+    background: white;
+    width: 65vw;
+    max-width: 250px;
+    height: 100vh
+}
+
+.mobile-nav__item {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #b10201;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    position: relative;
+    top: 25vh;
+}
+
+.mobile-nav__item:hover {
+  color: white;
+}
+
+  main {
+  grid-area: content;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.1rem 0.5rem;
+  height: auto;
+}
+
+footer {
+  grid-area: footer;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  margin: 2rem auto 0 auto;
+  background-color: #b10201;
+  font-family: "Courier New", monospace;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.open {
+  display: block !important;
+}
+
+@media (min-width: 40rem) {
+  .desktop-nav__item {
+    display: inline-block;
+  }
+
+  .toggle-button {
+    display: none;
+  }
+
+  nav {
+    text-align: center;
+  }
+}
