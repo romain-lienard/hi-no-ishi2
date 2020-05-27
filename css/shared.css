@@ -3,27 +3,27 @@ html {
 }
 
 body {
-    margin: 0;
-    background-color: #f0efed;
-    height: 100%;
-    min-width: 300px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-rows: min-content 3rem auto min-content;
-    grid-template-areas:
-      "header"
-      "navbar"
-      "content"
-      "footer";
+  margin: 0;
+  background-color: #f0efed;
+  height: 100%;
+  min-width: 300px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: min-content 3rem auto min-content;
+  grid-template-areas:
+    "header"
+    "navbar"
+    "content"
+    "footer";
   }
 
 .backdrop {
-    position: fixed;
-    display: none;
-    background: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
+  position: fixed;
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
 }
 
 .header-main {
@@ -103,7 +103,7 @@ body {
   text-decoration: none;
 }
 
-.desktop-nav a:hover, 
+.nav a:hover, 
 .subnav:hover .subnavbtn,
 .subnav-content a:hover {
   background-color: #b10201;
@@ -137,34 +137,48 @@ body {
 }
 
 .mobile-nav {
-    position: fixed;
-    display: none;
-    z-index: 20;
-    background: white;
-    width: 65vw;
-    max-width: 250px;
-    height: 100vh;
+  position: fixed;
+  display: none;
+  z-index: 20;
+  background: white;
+  width: 65vw;
+  max-width: 250px;
+  height: 100vh;
+}
+
+.mobile-nav h2 {
+  display: block;
+  font-size: 1.5rem;
+  font-family: "Courier New", monospace;
+  color: #b10201;
+  text-shadow: 0 0 2px #000;
+  margin: 0;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.mobile-nav-content {
+  margin-top: calc((100vh - (6 * 4rem))/2);
 }
 
 .mobile-nav__item {
-    font-family: "Courier New", monospace;
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-    color: #b10201;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    position: relative;
-    top: 25vh;
+  font-family: "Courier New", monospace;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #b10201;
+  text-align: center;
+  padding: 0.9rem 1rem;
+  text-decoration: none;
 }
+
 
 .mobile-nav__item:hover {
   color: white;
   background-color: #b10201;
 }
 
-  main {
+main {
   grid-area: content;
   max-width: 1000px;
   margin: 0 auto;
@@ -181,7 +195,6 @@ footer {
   font-family: "Courier New", monospace;
   text-align: center;
   color: white;
-  text-decoration: none;
 }
 
 footer a {
@@ -199,7 +212,7 @@ footer a {
   display: block !important;
 }
 
-@media (min-width: 40rem) {
+@media (min-width: 37rem) {
   .desktop-nav__item {
     display: inline-block;
   }
