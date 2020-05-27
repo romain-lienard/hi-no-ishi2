@@ -189,6 +189,12 @@ footer a {
   text-decoration: none;
 }
 
+.footer-column {
+  min-width: 300 px;
+  display: inline-block;
+  vertical-align: top;
+}
+
 .open {
   display: block !important;
 }
