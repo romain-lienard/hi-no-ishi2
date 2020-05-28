@@ -146,27 +146,22 @@ body {
 
 .mobile-nav {
   position: fixed;
-  display: none;
   z-index: 20;
   background: white;
   width: 65vw;
   max-width: 250px;
-  height: 100vh;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .mobile-nav h2 {
-  display: block;
   font-size: 1.5rem;
   font-family: "Courier New", monospace;
   color: #b10201;
   text-shadow: 0 0 2px #000;
-  margin: 0;
   text-align: center;
-  padding: 1rem 0;
-}
-
-.mobile-nav-content {
-  margin-top: calc((100vh - (6 * 4rem))/2);
 }
 
 .mobile-nav__item {
@@ -220,6 +215,10 @@ footer a {
   display: block !important;
 }
 
+.flex {
+  display: flex !important;
+}
+
 @media (min-width: 37rem) {
   .desktop-nav__item {
     display: inline-block;
@@ -237,9 +236,5 @@ footer a {
 @media (max-height: 21rem) {
   .mobile-nav__item {
     padding: 0.6rem 1rem;
-  }
-
-  .mobile-nav-content {
-    margin-top: calc((100vh - (6 * 3rem))/2);
   }
 }

@@ -3,11 +3,11 @@ var mobileMenu = document.querySelector(".mobile-nav");
 var backdrop = document.querySelector(".backdrop");
 
 mobileToggle.addEventListener("click", function() {
-    mobileMenu.classList.toggle("open");
+    mobileMenu.classList.toggle("flex");
     backdrop.classList.toggle("open");
   });
 
 backdrop.addEventListener("click", function() {
-    mobileMenu.classList.toggle("open");
+    mobileMenu.classList.toggle("flex");
     backdrop.classList.toggle("open");
   });
