@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -7,7 +11,6 @@ body {
   background-color: #f0efed;
   height: 100%;
   min-width: 300px;
-  box-sizing: border-box;
   display: grid;
   grid-template-rows: min-content 3rem auto min-content;
   grid-template-areas:
@@ -20,6 +23,8 @@ body {
 .backdrop {
   position: fixed;
   display: none;
+  opacity: 0%;
+  transition: opacity 0.3s;
   background: rgba(0, 0, 0, 0.5);
   width: 100vw;
   height: 100vh;
@@ -58,7 +63,8 @@ body {
 }
 
 .nav {
-  display: block;
+  display: flex;
+  align-items: center;
   grid-area: navbar;
   background-color: #d10100;
   font-family: "Courier New", monospace;
@@ -125,12 +131,11 @@ body {
 .toggle-button {
   width: 2.5rem;
   height: 2.5rem;
+  margin-left: 0.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
-  margin-top: calc((3rem - 2.5rem)/2);
-  margin-left: 0.5rem;
 }
 
 .toggle-button:focus {
@@ -142,10 +147,22 @@ body {
 .toggle-button__bars {
   font-size: 1.8rem !important;
   color: white;
+  text-shadow: 0 0 3px black;
+}
+
+.main-nav__brand {
+  margin: 0 1rem 0 auto;
+  display: none;
+  font-weight: bold;
+  text-shadow: 0 0 3px black;
+  font-size: 1.5rem;
+  color: white;
 }
 
 .mobile-nav {
   position: fixed;
+  left: -250px;
+  transition: left 0.5s;
   z-index: 20;
   background: white;
   width: 65vw;
@@ -211,15 +228,29 @@ footer a {
   vertical-align: top;
 }
 
-.open {
-  display: block !important;
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.flex {
-  display: flex !important;
+.sticky+.content {
+  padding-top: 60px;
+}
+
+.appear {
+  opacity: 100%;
+}
+
+.translatex250 {
+  left: 0;
 }
 
 @media (min-width: 37rem) {
+  .nav {
+    justify-content: center;
+  }
+
   .desktop-nav__item {
     display: inline-block;
   }
@@ -230,6 +261,10 @@ footer a {
 
   .nav {
     text-align: center;
+  }
+
+  .main-nav__brand {
+    display: none !important;
   }
 }
 
