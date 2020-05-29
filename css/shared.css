@@ -289,6 +289,19 @@ footer a {
   left: 0;
 }
 
+.content h1 {
+  font-size: 1.5rem;
+  color: #d10100;
+  text-shadow: 0 0 2px #000;
+  font-family: "Courier New";
+}
+
+.content p {
+  line-height: 1.4em;
+  font-family: "Helvetica";
+  text-align: justify;
+}
+
 @media (min-width: 37rem) {
   .nav {
     -webkit-box-pack: center;
@@ -310,6 +323,10 @@ footer a {
 
   .main-nav__brand {
     display: none !important;
+  }
+
+  .content h1 {
+    font-size: 2rem;
   }
 }
 
