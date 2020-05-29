@@ -16,5 +16,6 @@ mobileToggle.addEventListener("click", function() {
 backdrop.addEventListener("click", function() {
     mobileMenu.classList.remove("translatex250");
     mobileMenu.style.display = "none";
+    backdrop.classList.remove("appear");
     backdrop.style.display = "none";
   });
